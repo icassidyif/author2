@@ -1,0 +1,308 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  height: 100%;
+}
+body{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  /*padding-top: 80px;*/
+  /*for fixed header*/
+  height: 100%;
+}
+.page{
+  overflow-y: scroll;
+  flex: 1 auto;
+}
+.wrapper{
+  margin: 0 auto;
+  max-width: 960px;
+  position: relative;
+  padding: 0 10px;
+}
+.wrapper_full-width{
+  max-width: none;
+}
+.header{
+  background: #333333FF;
+  color: #fff;
+}
+.header_fixed{
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 80px;
+}
+.footer{
+  background: #333;
+  color: #fff;
+  margin-top: auto;
+}
+
+/*menu*/
+.is-active{
+  background: #506565;
+}
+
+.main-menu  {
+  position: fixed;
+  background:  #333;
+  left: 0;
+  right: 0; 
+  top: -300px; 
+  z-index: 10;
+}
+
+.main-menu ul {
+  text-align: center;
+  list-style: none;
+}
+
+.main-menu__close {
+  width: 50px;
+  display: inline-block;
+  position: relative;
+  font-size: 2em;
+  text-align: right;
+}
+ .close:before {
+  display: none;
+ }
+
+
+.main-menu li {
+  padding: 5px;
+  font-size: 1.3em;
+  font-family: sans-serif;
+}
+.main-menu li:hover {
+  background: #545454FF;
+}
+
+.main-menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+
+@media (min-width: 620px) {
+  .main-menu  {
+    position: static ;
+  }
+  .main-menu ul {
+    text-align: left;
+  }
+  .main-menu li  {
+    display: inline-block;
+    padding: 10px;
+  }
+ .main-menu__close{
+  display: none;
+ }
+}
+
+
+/**/
+
+img {
+  max-width: 100%;
+}
+
+.movie__poster {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (min-width: 600px) {
+  .movie__poster {
+    float: left;
+    width: 250px;
+    margin-top: 0;  
+  }
+  .movie__descr {
+    margin-left: 270px;
+  }
+}
+
+
+.movie__title {
+  color: #333;
+  margin: 20px 0;
+  font-size: 2em;
+  font-family: sans-serif;
+}
+
+.movie__title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.movie__slogan {
+  font-style: italic;
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.movie__cast {
+  margin: 15px 0;
+}
+
+.movie__intro {
+  margin: 10px 0;
+}
+.movie__nav {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 15px;
+  color: #fff;
+  background: #06c7dc;
+  font-size: 1.2em;
+}
+.btn_red {
+  background: red;
+}
+.btn_green {
+  background: green;
+}
+.btn_bigger {
+  padding: 10px 20px;
+  font-size: 1.2em;
+}
+
+.profile-prev {
+  margin-bottom: 10px;
+  position: relative;
+  padding: 15px;
+  background: #eee;
+  ;
+}
+
+.profile-prev:nth-child(odd) {
+  background: #fbfbfb;
+}
+.profile-prev__add {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.profile-prev__likes {
+  text-align: center;
+  margin: 10px 0;
+}
+.profile-prev__likes a {
+  text-decoration: none;
+  color: green;
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 1.2em;
+}
+.profile-prev__likes a:last-child {
+  color: red;
+}
+
+.profile-prev__title {
+  text-decoration: none;
+  color: #333;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.profile-prev__skils {
+  color: #333;
+  margin: 15px 0;
+}
+
+.profile-prev__skils a {
+  text-decoration: none;
+  margin: 0 15px 0 0;
+  color: inherit;
+}
+
+.profile-prev__stay {
+  font-size: .8em;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.profile-prev__reviews {
+  margin-bottom: 10px;
+}
+.profile-prev__reviews a {
+  text-decoration: none;
+}
+
+.rating {
+  color: red;
+  margin: 10px 0;
+}
+
+@media (min-width: 470px) {
+  .profile-prev__photo {
+    float: left;
+    width: 100px;
+  }
+  .profile-prev__body {
+    margin-left: 120px;
+  }
+  .profile-prev:nth-child(odd) .profile-prev__photo {
+    float: right;
+  }
+  .profile-prev:nth-child(odd) .profile-prev__body {
+    margin-right: 120px;
+    margin-left: 0;
+    text-align: right;
+  }
+  .profile-prev:nth-child(odd) .profile-prev__add {
+    right: auto;
+    left: 0;
+  }
+  .btn_bigger {
+    padding: 12px 22px;
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 620px) {
+   .profile-prev__photo {
+    float: left;
+    width: 250px;
+  }
+  .profile-prev__body {
+    margin-left: 280px;
+  }
+  .profile-prev:nth-child(odd) .profile-prev__photo {
+    float: right;
+  }
+  .profile-prev:nth-child(odd) .profile-prev__body {
+    margin-right: 280px;
+    margin-left: 0;
+    text-align: right;
+  }
+  .btn_bigger {
+    padding: 15px 25px;
+    font-size: 1.5em;
+  }
+
+
+
+
+
+
+}
+
+.clear {
+  clear: both;
+}
