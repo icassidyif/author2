@@ -298,11 +298,85 @@ img {
 
 
 
-
-
-
 }
 
 .clear {
   clear: both;
+}
+
+
+/*last block-----------------------------------*/
+
+
+.article {
+  position: relative;
+  border: 1px solid black;
+  margin: 50px 0;
+  padding: 20px;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #2d2d2c;
+  box-sizing: border-box;
+
+}
+
+.article__state {
+  position: absolute;
+  top: -15px;
+  right: 10px;
+
+}
+
+.state {
+  color: black;
+  padding: 5px 10px;
+  border: 3px solid black;
+  background: white;
+  font-weight: bold;
+  margin: 2px;
+}
+
+.state.red {
+  color: red;
+  border-color: red;
+  display: none;
+}
+.state.green {
+  color: green;
+  border-color:green;
+  display: none;
+}
+
+.article__header h2 {
+  font-size: 1.6em;
+  letter-spacing: 0.1em;
+}
+
+.article__intro {
+  font-size: 1.1em;
+}
+
+.article__more{
+  text-align: right;
+}
+
+.article__img {
+  max-width: 400px;
+  margin: 10px 0;
+}
+
+.article__status {
+  color: #5151d0;
+}
+
+.article:nth-child(odd){
+  background: #e8e8e8;
+}
+
+.article:nth-child(odd) .state.green{
+  display: inline-block;
+}
+
+.article:nth-child(3n-1) .state.red{
+  display: inline-block;
 }
